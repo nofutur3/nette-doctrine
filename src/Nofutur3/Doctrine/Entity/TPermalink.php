@@ -10,7 +10,7 @@
 namespace Nofutur3\Doctrine\Entity;
 
 
-class TPermalink
+trait TPermalink
 {
 	/**
 	 * @var string
