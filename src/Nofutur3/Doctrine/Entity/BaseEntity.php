@@ -9,6 +9,9 @@
 
 namespace Nofutur3\Doctrine\Entity;
 
+
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * @ORM\MappedSuperclass()
  * @ORM\HasLifecycleCallbacks()
