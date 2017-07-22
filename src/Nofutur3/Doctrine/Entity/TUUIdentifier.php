@@ -1,15 +1,24 @@
 <?php
+/**
+ * Identifier using GUID
+ *
+ * @package  : nofutur3/nette-doctrine
+ * @author   : Jakub Vyvazil <jakub@vyvazil.cz>
+ * @copyright: 2017
+ */
 
-namespace Nofutur3\Toolbox\Entity;
+namespace Nofutur3\Doctrine\Entity;
 
+
+use Doctrine\ORM\Mapping as ORM;
 
 trait TUUIdentifier
 {
     /**
+     * @var string
      * @ORM\Id
      * @ORM\Column(type="guid")
      * @ORM\GeneratedValue(strategy="UUID")
-     * @var string
      */
     private $id;
 
@@ -23,6 +32,6 @@ trait TUUIdentifier
 
     public function __clone()
     {
-        $this->id = NULL;
+        $this->id = null;
     }
 }

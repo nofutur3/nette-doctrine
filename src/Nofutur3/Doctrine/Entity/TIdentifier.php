@@ -1,6 +1,13 @@
 <?php
+/**
+ * Identifier using autoincremented integer
+ *
+ * @package  : nofutur3/nette-doctrine
+ * @author   : Jakub Vyvazil <jakub@vyvazil.cz>
+ * @copyright: 2017
+ */
 
-namespace Nofutur3\Toolbox\Entity;
+namespace Nofutur3\Doctrine\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
@@ -25,6 +32,6 @@ trait TIdentifier
 
     public function __clone()
     {
-        $this->id = NULL;
+        $this->id = null;
     }
 }
