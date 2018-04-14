@@ -8,3 +8,4 @@ composer.lock
 /tests/_support/_generated/*
 .php_cs.cache
 !.gitkeep
+composer.lock
