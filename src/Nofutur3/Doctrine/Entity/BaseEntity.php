@@ -60,7 +60,7 @@ abstract class BaseEntity
     /**
      * @return bool
      */
-    public function isEnabled()
+    public function isEnabled(): bool
     {
         return $this->enabled;
     }
@@ -68,15 +68,17 @@ abstract class BaseEntity
     /**
      * @param bool $enabled
      */
-    public function setEnabled($enabled)
+    public function setEnabled($enabled): ORM\Entity
     {
         $this->enabled = $enabled;
+
+        return $this;
     }
 
     /**
      * @return \DateTime
      */
-    public function getCreatedAt()
+    public function getCreatedAt(): \DateTime
     {
         return $this->createdAt;
     }
@@ -84,7 +86,7 @@ abstract class BaseEntity
     /**
      * @return \DateTime
      */
-    public function getUpdatedAt()
+    public function getUpdatedAt(): \DateTime
     {
         return $this->updatedAt;
     }

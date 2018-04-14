@@ -28,7 +28,7 @@ trait TUUIdentifier
     /**
      * @return string
      */
-    final public function getId()
+    final public function getId(): string
     {
         return $this->id;
     }

@@ -8,6 +8,8 @@
 
 namespace Nofutur3\Doctrine\Entity;
 
+use Doctrine\ORM\Mapping\Entity;
+
 trait TPermalink
 {
     /**
@@ -19,17 +21,21 @@ trait TPermalink
     /**
      * @return string
      */
-    public function getPermalink()
+    public function getPermalink(): ? string
     {
         return $this->permalink;
     }
 
     /**
      * @param string $permalink
+     *
+     * @return TPermalink
      */
-    public function setPermalink($permalink)
+    public function setPermalink($permalink): Entity
     {
         $this->permalink = Strings::webalize($permalink);
+
+        return $this;
     }
 
     /** @ORM\PrePersist */

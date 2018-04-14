@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 trait TIdentifier
 {
     /**
-     * @var integer
+     * @var int
      * @ORM\Id()
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue()
@@ -26,9 +26,9 @@ trait TIdentifier
     }
 
     /**
-     * @return integer
+     * @return int
      */
-    final public function getId()
+    final public function getId(): int
     {
         return $this->id;
     }
