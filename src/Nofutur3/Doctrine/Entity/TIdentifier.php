@@ -1,14 +1,12 @@
 <?php
 /**
- * Identifier using autoincremented integer
+ * Identifier using autoincremented integer.
  *
- * @package  : nofutur3/nette-doctrine
  * @author   : Jakub Vyvazil <jakub@vyvazil.cz>
  * @copyright: 2017
  */
 
 namespace Nofutur3\Doctrine\Entity;
-
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -22,16 +20,16 @@ trait TIdentifier
      */
     private $id;
 
+    public function __clone()
+    {
+        $this->id = null;
+    }
+
     /**
      * @return integer
      */
     final public function getId()
     {
         return $this->id;
-    }
-
-    public function __clone()
-    {
-        $this->id = null;
     }
 }

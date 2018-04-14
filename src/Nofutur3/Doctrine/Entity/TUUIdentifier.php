@@ -1,14 +1,12 @@
 <?php
 /**
- * Identifier using GUID
+ * Identifier using GUID.
  *
- * @package  : nofutur3/nette-doctrine
  * @author   : Jakub Vyvazil <jakub@vyvazil.cz>
  * @copyright: 2017
  */
 
 namespace Nofutur3\Doctrine\Entity;
-
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -22,16 +20,16 @@ trait TUUIdentifier
      */
     private $id;
 
+    public function __clone()
+    {
+        $this->id = null;
+    }
+
     /**
      * @return string
      */
     final public function getId()
     {
         return $this->id;
-    }
-
-    public function __clone()
-    {
-        $this->id = null;
     }
 }
