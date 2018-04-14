@@ -8,8 +8,6 @@
 
 namespace Nofutur3\Doctrine\Entity;
 
-use Doctrine\ORM\Mapping\Entity;
-
 trait TPermalink
 {
     /**
