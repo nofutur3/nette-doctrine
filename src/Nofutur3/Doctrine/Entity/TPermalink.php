@@ -31,7 +31,7 @@ trait TPermalink
      *
      * @return TPermalink
      */
-    public function setPermalink($permalink): Entity
+    public function setPermalink($permalink)
     {
         $this->permalink = Strings::webalize($permalink);
 

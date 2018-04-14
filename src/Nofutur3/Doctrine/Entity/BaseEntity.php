@@ -68,7 +68,7 @@ abstract class BaseEntity
     /**
      * @param bool $enabled
      */
-    public function setEnabled($enabled): ORM\Entity
+    public function setEnabled($enabled)
     {
         $this->enabled = $enabled;
 
